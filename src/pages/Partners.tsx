@@ -1,61 +1,85 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import { ArrowRight, Building, Users, Handshake, Globe, Award, Target } from "lucide-react";
+import { ArrowRight, Users, Store, Factory, Landmark, Building, Globe, Target, FileText, Settings, Handshake, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const partnerCategories = [
   {
-    icon: Building,
-    title: "Government Agencies",
-    description: "Collaboration with ministries and government bodies supporting industrial development and technology transfer.",
+    icon: Users,
+    title: "Local Businesspersons & Entrepreneurs",
+    items: [
+      "Individual and family business owners seeking to establish industries, factories, or production units",
+      "Traders and service-sector entrepreneurs transitioning into manufacturing and value-added production",
+      "Business groups interested in product or semi-product development",
+    ],
   },
   {
-    icon: Users,
-    title: "Development Partners",
-    description: "Working with international organizations and NGOs focused on sustainable development in Nepal.",
+    icon: Store,
+    title: "Traditional Product Producers & Local Enterprises",
+    items: [
+      "Producers of traditional, indigenous, and local products seeking modernization and scale-up",
+      "Cottage and small industries aiming to improve productivity, quality, and market access through technology",
+      "Community-based producers moving from manual to semi-industrial production systems",
+    ],
+  },
+  {
+    icon: Landmark,
+    title: "Cooperatives",
+    items: [
+      "Savings and credit cooperatives with surplus liquidity",
+      "Multi-purpose, agricultural, and producer cooperatives",
+      "Cooperatives seeking productive investment avenues beyond lending and consumption-oriented uses",
+    ],
+  },
+  {
+    icon: TrendingUp,
+    title: "Investment Institutions & Investor Groups",
+    items: [
+      "Development banks, microfinance institutions, and financial intermediaries",
+      "Private investment groups and consortiums",
+      "Institutional investors interested in technology-backed industrial ventures",
+    ],
+  },
+  {
+    icon: Building,
+    title: "Public & Semi-Public Institutions",
+    items: [
+      "Government and semi-government organizations",
+      "Public enterprises and local government-linked investment initiatives",
+      "Institutions promoting employment, industrialization, and local value chains",
+    ],
   },
   {
     icon: Globe,
-    title: "Technology Providers",
-    description: "Partnerships with global technology companies and equipment manufacturers.",
-  },
-  {
-    icon: Handshake,
-    title: "Industry Associations",
-    description: "Engagement with business chambers and industry groups across various sectors.",
-  },
-  {
-    icon: Award,
-    title: "Academic Institutions",
-    description: "Collaboration with universities and research centers for R&D and capacity building.",
-  },
-  {
-    icon: Target,
-    title: "Private Investors",
-    description: "Connecting with investors interested in technology-driven industrial opportunities.",
+    title: "Technology & Implementation Partners",
+    items: [
+      "Global and regional technology providers",
+      "Equipment and machinery manufacturers",
+      "Engineering, technical service, and system integration partners",
+    ],
   },
 ];
 
-const investmentOpportunities = [
+const tacRoles = [
   {
-    title: "Technology Import & Distribution",
-    description: "Investment in importing and distributing proven industrial technologies and machinery.",
-    potential: "High Growth",
+    icon: Target,
+    text: "Identifying viable production-based business opportunities",
   },
   {
-    title: "Manufacturing Setup",
-    description: "Establishment of production facilities using transferred technologies.",
-    potential: "Medium-High",
+    icon: Globe,
+    text: "Introducing globally proven and locally adaptable technologies",
   },
   {
-    title: "Service & Maintenance",
-    description: "Investment in after-sales service and maintenance networks.",
-    potential: "Steady Returns",
+    icon: FileText,
+    text: "Developing bankable business and project models",
   },
   {
-    title: "Training & Capacity Building",
-    description: "Investment in technical training centers and skill development programs.",
-    potential: "Social Impact",
+    icon: Factory,
+    text: "Supporting factory establishment, operation, and scale-up",
+  },
+  {
+    icon: TrendingUp,
+    text: "Aligning investments with domestic demand, import substitution, and export potential",
   },
 ];
 
@@ -73,14 +97,25 @@ const Partners = () => {
               Investors & Partners
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Building strategic partnerships to accelerate technology-driven development in Nepal.
+              Technology Applied Centre (TAC Nepal) collaborates with a wide range of local investors and partners to promote production-oriented, technology-enabled industries in Nepal.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="section-padding">
+        <div className="container-wide">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our primary focus is to support those who possess capital, local knowledge, or traditional production experience but require structured business ideas, technology support, and implementation guidance.
             </p>
           </div>
         </div>
       </section>
 
       {/* Partner Categories */}
-      <section className="section-padding">
+      <section className="section-padding bg-secondary/30">
         <div className="container-wide">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
@@ -96,84 +131,51 @@ const Partners = () => {
             {partnerCategories.map((category) => (
               <div
                 key={category.title}
-                className="group bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-large"
+                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-large"
               >
-                <div className="w-14 h-14 bg-sage-light rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary transition-colors">
-                  <category.icon className="h-7 w-7 text-primary group-hover:text-primary-foreground transition-colors" />
+                <div className="w-14 h-14 bg-sage-light rounded-xl flex items-center justify-center mb-6">
+                  <category.icon className="h-7 w-7 text-primary" />
                 </div>
-                <h3 className="font-serif font-semibold text-xl mb-3 text-foreground">
+                <h3 className="font-serif font-semibold text-xl mb-4 text-foreground">
                   {category.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {category.description}
-                </p>
+                <ul className="space-y-3">
+                  {category.items.map((item, index) => (
+                    <li key={index} className="flex items-start gap-3 text-muted-foreground text-sm">
+                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Current Partners Placeholder */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-wide">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-              Our Network
-            </span>
-            <h2 className="section-title font-serif">Current Partners</h2>
-            <p className="section-subtitle mx-auto">
-              Organizations we are working with to drive technology transfer in Nepal
-            </p>
-          </div>
-
-          {/* Partner logos placeholder grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
-            {Array.from({ length: 6 }).map((_, index) => (
-              <div
-                key={index}
-                className="aspect-[3/2] bg-card rounded-xl border border-border flex items-center justify-center hover:border-primary/30 transition-colors"
-              >
-                <span className="text-muted-foreground text-sm">Partner Logo</span>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-center text-muted-foreground mt-8">
-            Partnership announcements coming soon. Interested in partnering? Contact us below.
-          </p>
-        </div>
-      </section>
-
-      {/* Investment Opportunities */}
+      {/* TAC Nepal's Role */}
       <section className="section-padding">
         <div className="container-wide">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-              For Investors
+              Our Value
             </span>
-            <h2 className="section-title font-serif">Investment Opportunities</h2>
+            <h2 className="section-title font-serif">TAC Nepal's Role for Investors & Partners</h2>
             <p className="section-subtitle mx-auto">
-              Explore technology-driven investment opportunities in Nepal's growing economy
+              How we support and enable technology-driven investments
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {investmentOpportunities.map((opportunity) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {tacRoles.map((role, index) => (
               <div
-                key={opportunity.title}
-                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300"
+                key={index}
+                className="bg-card p-6 rounded-2xl border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-medium flex items-start gap-4"
               >
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="font-serif font-semibold text-xl text-foreground">
-                    {opportunity.title}
-                  </h3>
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                    {opportunity.potential}
-                  </span>
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <role.icon className="h-5 w-5 text-primary" />
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  {opportunity.description}
-                </p>
+                <p className="text-foreground leading-relaxed">{role.text}</p>
               </div>
             ))}
           </div>

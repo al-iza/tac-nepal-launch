@@ -1,36 +1,43 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import { ArrowRight, Rocket, Clock, MapPin, Calendar } from "lucide-react";
+import { ArrowRight, Rocket, Factory, Leaf, Search, Users, FileText, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const upcomingProjects = [
+const projectAreas = [
   {
-    title: "Brick Interlocking Technology Transfer",
-    sector: "Construction",
-    location: "Kathmandu Valley",
-    status: "In Planning",
-    description: "Introduction of modern interlocking brick technology for sustainable construction with reduced cement usage and faster assembly.",
+    icon: Factory,
+    title: "Technology-Enabled Local Resource Industries",
+    description: "Identification and development of industries based on Nepal's local raw materials—agro-products, minerals, forest-based resources, and construction materials—using globally proven production technologies to enhance value addition and productivity.",
   },
   {
-    title: "Agricultural Processing Hub",
-    sector: "Agriculture",
-    location: "Chitwan",
-    status: "Concept Phase",
-    description: "Establishment of a model agro-processing facility showcasing advanced drying, grading, and packaging technologies.",
+    icon: Factory,
+    title: "Industrial & Factory Establishment Projects",
+    description: "Support for the establishment of small, medium, and large-scale factories through technology selection, production line design, machinery sourcing, and operational setup, ensuring efficient and sustainable industrial operations.",
   },
   {
-    title: "Renewable Energy Solutions",
-    sector: "Energy",
-    location: "Multiple Locations",
-    status: "Research Phase",
-    description: "Pilot projects for solar and micro-hydro energy systems adapted for rural Nepal communities.",
+    icon: Leaf,
+    title: "Agro-Processing & Food Industry Initiatives",
+    description: "Development of agro-processing, storage, and value-addition projects including food processing, cold chain, and export-oriented production, linking local farmers with technology-enabled processing systems.",
   },
   {
-    title: "Waste-to-Resource Initiative",
-    sector: "Waste Management",
-    location: "Urban Centers",
-    status: "Planning",
-    description: "Technology solutions for converting municipal and industrial waste into valuable resources and energy.",
+    icon: Search,
+    title: "Technology Scouting & Demonstration Projects",
+    description: "Exploration and pilot demonstration of globally proven machinery, equipment, and production systems suitable for Nepal's industrial and resource conditions, reducing risk before full-scale investment.",
+  },
+  {
+    icon: Users,
+    title: "SME & Entrepreneurship Support Initiatives",
+    description: "Support to technology-driven SMEs and startups through access to appropriate technologies, business planning, feasibility studies, and implementation guidance for scalable ventures.",
+  },
+  {
+    icon: FileText,
+    title: "Investment-Ready Project Development",
+    description: "Preparation of bankable project concepts including technical, financial, and operational feasibility to support investors, financial institutions, and development partners in technology-backed ventures.",
+  },
+  {
+    icon: Handshake,
+    title: "Public–Private & Institutional Collaboration Projects",
+    description: "Collaboration with government agencies, development partners, and private investors to promote technology adoption, industrial growth, and employment generation aligned with national priorities.",
   },
 ];
 
@@ -48,8 +55,60 @@ const Projects = () => {
               Projects & Initiatives
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Transforming global technologies into local solutions through strategic projects and partnerships.
+              Technology Applied Centre (TAC Nepal) develops and supports technology-driven projects that transform local resources into productive industries.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="section-padding">
+        <div className="container-wide">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Our initiatives focus on deploying globally proven technologies to establish commercially viable factories, production units, and technology-enabled enterprises across Nepal. We bridge the gap between advanced technological solutions and local implementation.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Project Areas */}
+      <section className="section-padding bg-secondary/30">
+        <div className="container-wide">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
+              Initiative Areas
+            </span>
+            <h2 className="section-title font-serif">Key Project & Initiative Areas</h2>
+            <p className="section-subtitle mx-auto">
+              Strategic areas where we develop and support technology-driven projects
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {projectAreas.map((project, index) => (
+              <div
+                key={project.title}
+                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-medium"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <project.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="text-2xl font-serif font-bold text-primary/30">{String(index + 1).padStart(2, '0')}</span>
+                      <h3 className="font-serif font-bold text-lg text-foreground">
+                        {project.title}
+                      </h3>
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed text-sm">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -62,7 +121,7 @@ const Projects = () => {
               <Rocket className="h-16 w-16 text-primary mx-auto mb-6" />
               <h2 className="text-3xl font-serif font-bold mb-4">Building the Future</h2>
               <p className="text-lg text-muted-foreground mb-8">
-                As a newly established institution, TAC Nepal is currently in the process of developing and launching our inaugural portfolio of technology transfer projects. We are actively scouting global technologies, building partnerships, and planning implementation strategies.
+                TAC Nepal is actively developing and launching our portfolio of technology transfer projects. We are scouting global technologies, building partnerships, and planning implementation strategies to deliver commercial returns, operational sustainability, and measurable economic impact.
               </p>
               <Button asChild size="lg" className="bg-primary hover:bg-primary-dark text-primary-foreground">
                 <Link to="/contact">
@@ -75,54 +134,8 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Upcoming Projects */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container-wide">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-              In Development
-            </span>
-            <h2 className="section-title font-serif">Upcoming Initiatives</h2>
-            <p className="section-subtitle mx-auto">
-              Projects currently in various stages of planning and development
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {upcomingProjects.map((project, index) => (
-              <div
-                key={project.title}
-                className="bg-card rounded-2xl p-8 border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-medium"
-              >
-                <div className="flex items-center gap-2 mb-4">
-                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
-                    {project.sector}
-                  </span>
-                  <span className="px-3 py-1 bg-muted text-muted-foreground text-xs font-medium rounded-full flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
-                    {project.status}
-                  </span>
-                </div>
-                <h3 className="font-serif font-bold text-xl mb-3 text-foreground">
-                  {project.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4" />
-                    {project.location}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Call to Action */}
-      <section className="section-padding">
+      <section className="section-padding bg-cream">
         <div className="container-wide">
           <div className="bg-primary rounded-3xl p-12 text-center text-primary-foreground">
             <h2 className="text-3xl md:text-4xl font-serif font-bold mb-4">
