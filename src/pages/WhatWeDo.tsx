@@ -1,47 +1,46 @@
 import { Layout } from "@/components/layout/Layout";
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Wrench, Tractor, Building, Factory } from "lucide-react";
+import { ArrowRight, Check, Wrench, Tractor, Building, Factory, Shield, LineChart, Globe, Settings, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-const howWeDeliver = [
-  "Bridging Global Expertise with Local Application: Our approach involves systematic scouting, evaluation, and acquisition of globally proven technologies. These innovations are then carefully adapted to suit Nepal's specific conditions—its natural resources, skilled workforce, infrastructure realities, and market needs.",
-  "Facilitating Sustainable Industrial Ecosystems: Beyond technology acquisition, TAC Nepal is committed to technology–market integration. We actively support entrepreneurs in establishing production facilities and help connect them to essential networks—investors, suppliers, government programs, and development partners—ensuring lasting, sustainable impact.",
-];
-
 const whyPartner = [
-  "Access to a curated portfolio of globally proven, locally adaptable technologies across diverse sectors.",
-  "Technical expertise in localization, integration, and optimization of technologies for Nepal-specific conditions.",
-  "Support in connecting with investors, government agencies, industry associations, and development organizations.",
-  "Comprehensive end-to-end facilitation—from technology identification to production setup and operational sustainability.",
-  "A mission-driven commitment to sustainable development, knowledge transfer, and empowering local entrepreneurs and communities.",
+  {
+    icon: Shield,
+    title: "Technology-Led De-Risking",
+    description: "We introduce globally tested technologies, reducing technical and operational risks for investors.",
+  },
+  {
+    icon: LineChart,
+    title: "Pipeline of Bankable Projects",
+    description: "TAC Nepal develops investment-ready ventures—from SMEs to large industries—with clear business models and scalability.",
+  },
+  {
+    icon: Globe,
+    title: "Local Execution, Global Standards",
+    description: "Strong local presence combined with international technology and best practices ensures efficient implementation.",
+  },
+  {
+    icon: Settings,
+    title: "End-to-End Support",
+    description: "From technology selection and feasibility to establishment of factories and production houses, we support the full investment lifecycle.",
+  },
+  {
+    icon: Target,
+    title: "Alignment with National Priorities",
+    description: "Our projects align with Nepal's industrialization, import substitution, export promotion, and job creation goals.",
+  },
 ];
 
 const indoorApplications = [
-  "Brick Interlocking Machines",
-  "Hollow Block Making Machines",
-  "Paving Block Machines",
-  "Cement Tile Machines",
-  "Decorative Wall Panel Machines",
-  "Pipe Manufacturing Machines",
-  "AAC Block Plants",
-  "Fly Ash Brick Machines",
-  "Concrete Mixer Machines",
-  "Stone Crusher Units",
-  "TMT Bar Bending & Cutting Machines",
-  "Shuttering & Formwork Systems",
+  "Small construction equipment (vibration rammers, brick cutters, platforms)",
+  "Agricultural, irrigation, harvesting, livestock and forestry machinery",
+  "Gardening, mowing, spraying and agri-processing equipment",
 ];
 
 const outdoorApplications = [
-  "Excavators & Backhoe Loaders",
-  "Wheel Loaders",
-  "Motor Graders",
-  "Road Rollers & Compactors",
-  "Tower Cranes & Mobile Cranes",
-  "Concrete Batch Mix Plants",
-  "Asphalt Mixing Plants",
-  "Bulldozers",
-  "Drilling Rigs",
-  "Tipper Trucks / Dump Trucks",
+  "Excavators, forklifts, cranes, concrete mixer trucks, compactors",
+  "Mining, hoisting, fire-fighting, petroleum and geological machinery",
+  "Agricultural transport vehicles, tractors, harvesters and land-improvement machinery",
 ];
 
 const WhatWeDo = () => {
@@ -69,13 +68,13 @@ const WhatWeDo = () => {
         <div className="container-wide">
           <div className="max-w-4xl">
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              Technology Applied Centre (TAC Nepal) accelerates technology-driven investment and industrial growth in Nepal by identifying, adapting, and promoting innovative technologies, machinery, and production systems from around the world. We bridge the gap between advanced technological solutions and local implementation, working closely with entrepreneurs, investors, government agencies, and development partners.
+              Technology Applied Centre (TAC Nepal) accelerates technology-driven investment and industrial growth in Nepal. We identify globally proven technologies and adapt them for local markets, enabling commercially viable ventures across sectors.
             </p>
             <p className="text-lg text-foreground leading-relaxed mb-6">
-              Our focus spans agriculture, construction, manufacturing, energy, water, and waste management—sectors where technology can unlock productivity, create employment, support import substitution, and contribute to national development.
+              We support innovation hubs, incubators, and startups by providing access to advanced technologies, technical expertise, and scalable business models. From SMEs to large-scale industries, factories, and production houses, TAC Nepal facilitates end-to-end technology adoption to reduce risk, improve productivity, and maximize investment returns.
             </p>
             <p className="text-lg text-foreground leading-relaxed">
-              Whether it's a new machine for a small factory, a sustainable production method for a community enterprise, or a large-scale industrial system for a private investor, TAC Nepal helps make technology work for Nepal.
+              Through strategic partnerships with investors, institutions, and policymakers, we help transform innovation into sustainable, bankable enterprises.
             </p>
           </div>
         </div>
@@ -84,28 +83,17 @@ const WhatWeDo = () => {
       {/* How We Deliver */}
       <section className="section-padding bg-secondary/30">
         <div className="container-wide">
-          <div className="grid lg:grid-cols-2 gap-16">
-            <div>
-              <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
-                Our Approach
-              </span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">How We Deliver</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Our systematic approach ensures successful technology transfer from global sources to local applications.
-              </p>
-            </div>
-            <div className="space-y-6">
-              {howWeDeliver.map((item, index) => (
-                <div key={index} className="bg-card p-6 rounded-2xl border border-border">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-primary-foreground font-bold text-sm">{index + 1}</span>
-                    </div>
-                    <p className="text-foreground leading-relaxed">{item}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
+              Our Approach
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold mb-6">How We Deliver</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+              TAC Nepal de-risks industrial investment by localizing proven global technologies into scalable, high-return ventures across Nepal.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              TAC Nepal enables technology-backed industrial investments through access to proven machinery, complete production systems, and end-to-end implementation support—accelerating returns while minimizing risk.
+            </p>
           </div>
         </div>
       </section>
@@ -117,21 +105,20 @@ const WhatWeDo = () => {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
               Benefits
             </span>
-            <h2 className="section-title font-serif">Why Partner with TAC Nepal</h2>
+            <h2 className="section-title font-serif">Why Partnership with TAC Nepal</h2>
             <p className="section-subtitle mx-auto">
               Comprehensive support for technology transfer and industrial development
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {whyPartner.map((reason, index) => (
-              <div key={index} className="bg-card p-6 rounded-2xl border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-medium">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Check className="h-4 w-4 text-primary" />
-                  </div>
-                  <p className="text-foreground text-sm leading-relaxed">{reason}</p>
+            {whyPartner.map((reason) => (
+              <div key={reason.title} className="bg-card p-8 rounded-2xl border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-medium">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                  <reason.icon className="h-6 w-6 text-primary" />
                 </div>
+                <h3 className="font-serif font-semibold text-lg mb-2 text-foreground">{reason.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{reason.description}</p>
               </div>
             ))}
           </div>
@@ -159,15 +146,15 @@ const WhatWeDo = () => {
                   <Factory className="h-7 w-7 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-serif font-bold text-xl">Indoor / Semi-Industrial</h3>
+                  <h3 className="font-serif font-bold text-xl">Indoor / Semi-Industrial Applications</h3>
                   <p className="text-sm text-muted-foreground">Manufacturing & Production</p>
                 </div>
               </div>
-              <ul className="grid grid-cols-1 gap-3">
+              <ul className="grid grid-cols-1 gap-4">
                 {indoorApplications.map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-foreground">
-                    <Wrench className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span className="text-sm">{item}</span>
+                  <li key={index} className="flex items-start gap-3 text-foreground">
+                    <Wrench className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -184,11 +171,11 @@ const WhatWeDo = () => {
                   <p className="text-sm text-muted-foreground">Construction & Infrastructure</p>
                 </div>
               </div>
-              <ul className="grid grid-cols-1 gap-3">
+              <ul className="grid grid-cols-1 gap-4">
                 {outdoorApplications.map((item, index) => (
-                  <li key={index} className="flex items-center gap-3 text-foreground">
-                    <Building className="h-4 w-4 text-primary flex-shrink-0" />
-                    <span className="text-sm">{item}</span>
+                  <li key={index} className="flex items-start gap-3 text-foreground">
+                    <Building className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span className="text-sm leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>

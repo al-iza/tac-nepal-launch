@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { Globe, Settings, Link as LinkIcon, Rocket, MapPin, Factory, Cog, Quote } from "lucide-react";
+import { Globe, Settings, Link as LinkIcon, Rocket, MapPin, Factory, Cog, Quote, User } from "lucide-react";
 
 const approaches = [
   {
@@ -40,10 +40,26 @@ const approaches = [
 ];
 
 const leadershipTeam = [
-  { name: "Chairperson", role: "Board of Directors", image: null },
-  { name: "Executive Director", role: "Operations", image: null },
-  { name: "Technical Director", role: "Technology Transfer", image: null },
-  { name: "Finance Director", role: "Finance & Admin", image: null },
+  { 
+    name: "Dr. Kushendra Bahadur Mahat", 
+    role: "Chairperson & Managing Director", 
+    description: "Provides strategic direction, governance, and operational leadership with a strong conviction that technology-driven investment is central to Nepal's industrial growth.",
+  },
+  { 
+    name: "Head – Finance, Business Planning & Investment", 
+    role: "Finance & Investment", 
+    description: "Leads business planning, financial modeling, and project feasibility. Focuses on developing bankable projects by aligning technology costs, operational assumptions, and market potential.",
+  },
+  { 
+    name: "Head – Information & Technology", 
+    role: "Technology", 
+    description: "Responsible for identifying and evaluating globally proven technologies, machinery, and production systems relevant to Nepal's local resource-based industries.",
+  },
+  { 
+    name: "Head – Legal, Administration & Government Affairs", 
+    role: "Legal & Admin", 
+    description: "Manages legal compliance, regulatory processes, and institutional administration. Supports company establishment, factory licensing, and government coordination.",
+  },
 ];
 
 const WhoWeAre = () => {
@@ -150,7 +166,7 @@ const WhoWeAre = () => {
       {/* Chairperson Message */}
       <section className="section-padding bg-cream">
         <div className="container-wide">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
                 Leadership
@@ -160,19 +176,59 @@ const WhoWeAre = () => {
             
             <div className="bg-card rounded-3xl p-8 md:p-12 shadow-medium">
               <Quote className="h-10 w-10 text-primary/30 mb-6" />
-              <p className="text-lg text-foreground leading-relaxed mb-6 italic">
-                At TAC Nepal, we believe that technology is not just about innovation—it's about transformation. Our mission is to bridge the gap between global technological advancements and Nepal's local needs, creating opportunities for sustainable growth and prosperity.
-              </p>
-              <p className="text-lg text-foreground leading-relaxed mb-8 italic">
-                Together with our partners, investors, and communities, we are committed to building a knowledge-based economy that benefits all Nepalis.
-              </p>
-              <div className="flex items-center gap-4">
+              
+              <div className="space-y-6 text-foreground leading-relaxed">
+                <p className="text-lg">
+                  At Technology Applied Centre (TAC Nepal), we operate with a clear conviction: capital delivers its highest returns when paired with the right technology, strong local execution, and a scalable market vision. Nepal today offers precisely this opportunity.
+                </p>
+                
+                <p>
+                  TAC Nepal was established to serve as a technology-to-investment bridge—connecting globally proven equipment, machinery, and production systems with Nepal's rapidly expanding industrial, infrastructure, energy, agro-processing, and service sectors. Our role goes beyond advisory; we act as enablers, de-riskers, and execution partners in technology-backed ventures.
+                </p>
+                
+                <p>
+                  For investors, Nepal represents an underpenetrated market with strong demand fundamentals, policy momentum toward industrialization, and significant potential for import substitution and export-led growth. For global technology and equipment providers, it is a market where localized application, structured deployment, and long-term partnerships are critical. TAC Nepal operates at this intersection—transforming opportunity into bankable reality.
+                </p>
+                
+                <p>
+                  What differentiates TAC Nepal is our technology-led investment framework. We work exclusively with globally tested and commercially proven technologies, adapting them into locally viable production systems supported by rigorous feasibility analysis, business structuring, and end-to-end implementation. This approach substantially reduces technical, operational, and market risks while accelerating time to revenue.
+                </p>
+                
+                <p>
+                  Our engagement spans the full lifecycle of technology-enabled ventures—from machinery and production line selection to factory establishment, commissioning, and scale-up. Whether supporting SMEs, industrial plants, or large production houses, TAC Nepal ensures that technology deployment meets global standards of performance, reliability, and efficiency, while remaining aligned with local operating conditions.
+                </p>
+                
+                <p>
+                  We actively collaborate with international equipment manufacturers, OEMs, technology licensors, and solution providers seeking structured and sustainable entry into Nepal. Through TAC Nepal, technology partners gain access to:
+                </p>
+                
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Investment-ready projects and credible local counterparts</li>
+                  <li>Structured demand pipelines across priority growth sectors</li>
+                  <li>Professional execution aligned with international best practices</li>
+                  <li>Long-term market presence beyond transactional sales</li>
+                </ul>
+                
+                <p>
+                  Our sector focus—including renewable energy, manufacturing, agro-processing, construction materials, tourism infrastructure, and technology-driven SMEs—reflects Nepal's most promising growth corridors. Each initiative is designed to deliver commercial returns, operational sustainability, and measurable economic impact.
+                </p>
+                
+                <p>
+                  Equally important, our work is aligned with Nepal's national priorities—industrial growth, employment generation, environmental responsibility, and productivity through technology. This alignment strengthens project bankability, institutional support, and long-term viability.
+                </p>
+                
+                <p className="italic">
+                  As Chairman, I extend an open invitation to investors, financial institutions, equipment manufacturers, and technology innovators seeking a trusted and capable partner in Nepal. TAC Nepal offers more than market access—we offer execution certainty, investment discipline, and shared long-term value creation. Together, we can convert technology into industry, investment into impact, and opportunity into enduring success.
+                </p>
+              </div>
+              
+              <div className="flex items-center gap-4 mt-8 pt-8 border-t border-border">
                 <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center">
-                  <span className="text-2xl font-serif font-bold text-primary">C</span>
+                  <User className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <p className="font-serif font-semibold text-foreground">Chairperson</p>
-                  <p className="text-sm text-muted-foreground">Technology Applied Centre Nepal</p>
+                  <p className="font-serif font-semibold text-foreground text-lg">Dr. Kushendra Bahadur Mahat</p>
+                  <p className="text-sm text-muted-foreground">Chairperson, Technology Applied Centre (TAC Nepal)</p>
                 </div>
               </div>
             </div>
@@ -187,21 +243,22 @@ const WhoWeAre = () => {
             <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full mb-4">
               Our Team
             </span>
-            <h2 className="section-title font-serif">Leadership & Management</h2>
+            <h2 className="section-title font-serif">Leadership & Management Team</h2>
             <p className="section-subtitle mx-auto">
               Experienced professionals dedicated to driving technology transfer and sustainable development
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {leadershipTeam.map((member) => (
               <div key={member.name} className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-large">
-                <div className="aspect-square bg-sage-light/50 flex items-center justify-center">
-                  <span className="text-4xl font-serif font-bold text-primary/30">{member.name[0]}</span>
-                </div>
-                <div className="p-6 text-center">
+                <div className="p-8">
+                  <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center mb-4">
+                    <User className="h-8 w-8 text-primary" />
+                  </div>
                   <h3 className="font-serif font-semibold text-lg text-foreground mb-1">{member.name}</h3>
-                  <p className="text-sm text-muted-foreground">{member.role}</p>
+                  <p className="text-sm text-primary font-medium mb-3">{member.role}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{member.description}</p>
                 </div>
               </div>
             ))}
