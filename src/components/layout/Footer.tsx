@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Linkedin, Youtube, Mail, MapPin, Phone } from "lucide-react";
+import tacNepalLogo from "@/assets/tac-nepal-logo.png";
 
 const footerLinks = {
   about: [
@@ -34,17 +35,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-serif font-bold text-xl">TAC</span>
-              </div>
-              <div>
-                <p className="font-serif font-bold text-lg leading-tight">Technology Applied Centre</p>
-                <p className="text-xs text-primary-foreground/70">TAC Nepal</p>
-              </div>
+            <Link to="/" className="mb-6 inline-block">
+              <img 
+                src={tacNepalLogo} 
+                alt="TAC Nepal - Technology Applied Centre" 
+                className="h-20 w-auto bg-white rounded-lg p-2"
+              />
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6 max-w-sm">
-              Accelerating Nepal's sustainable development by transforming global technological innovations into practical, locally applicable solutions.
+              Transformation Through Technology — transforming global technological innovations into practical, locally applicable solutions.
             </p>
             <div className="space-y-3 text-sm text-primary-foreground/80">
               <div className="flex items-center gap-3">
