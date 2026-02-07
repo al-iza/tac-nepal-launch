@@ -9,6 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import tacNepalLogo from "@/assets/tac-nepal-logo.png";
 
 const navItems = [
   { label: "Who We Are", path: "/who-we-are" },
@@ -30,7 +31,7 @@ export function Header() {
       {/* Top bar */}
       <div className="bg-primary">
         <div className="container-wide flex items-center justify-end py-2 text-sm text-primary-foreground">
-          <span className="hidden sm:inline">Accelerating Nepal's Sustainable Development</span>
+          <span className="hidden sm:inline">Transformation Through Technology</span>
         </div>
       </div>
 
@@ -38,14 +39,12 @@ export function Header() {
       <div className="container-wide">
         <div className="flex h-20 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center transition-transform group-hover:scale-105">
-              <span className="text-primary-foreground font-serif font-bold text-xl">TAC</span>
-            </div>
-            <div className="hidden sm:block">
-              <p className="font-serif font-bold text-lg text-foreground leading-tight">Technology Applied Centre</p>
-              <p className="text-xs text-muted-foreground">TAC Nepal</p>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={tacNepalLogo} 
+              alt="TAC Nepal - Technology Applied Centre" 
+              className="h-16 w-auto transition-transform group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
