@@ -253,12 +253,20 @@ const WhoWeAre = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {leadershipTeam.map((member) => (
+            {leadershipTeam.map((member, index) => (
               <div key={member.name} className="group bg-card rounded-2xl overflow-hidden border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-large">
                 <div className="p-8">
-                  <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center mb-4">
-                    <User className="h-8 w-8 text-primary" />
-                  </div>
+                  {index === 0 ? (
+                    <img 
+                      src={drKushendraImage} 
+                      alt={member.name}
+                      className="w-20 h-20 rounded-full object-cover object-top border-2 border-primary/20 shadow-md mb-4"
+                    />
+                  ) : (
+                    <div className="w-20 h-20 bg-secondary/20 rounded-full flex items-center justify-center mb-4">
+                      <User className="h-10 w-10 text-primary/60" />
+                    </div>
+                  )}
                   <h3 className="font-serif font-semibold text-lg text-foreground mb-1">{member.name}</h3>
                   <p className="text-sm text-primary font-medium mb-3">{member.role}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{member.description}</p>
