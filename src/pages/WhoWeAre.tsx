@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Globe, Settings, Link as LinkIcon, Rocket, MapPin, Factory, Cog, Quote, User } from "lucide-react";
+import drKushendraImage from "@/assets/dr-kushendra-mahat.jpg";
 
 const approaches = [
   {
@@ -222,10 +223,12 @@ const WhoWeAre = () => {
                 </p>
               </div>
               
-              <div className="flex items-center gap-4 mt-8 pt-8 border-t border-border">
-                <div className="w-16 h-16 bg-sage-light rounded-full flex items-center justify-center">
-                  <User className="h-8 w-8 text-primary" />
-                </div>
+              <div className="flex items-center gap-6 mt-8 pt-8 border-t border-border">
+                <img 
+                  src={drKushendraImage} 
+                  alt="Dr. Kushendra Bahadur Mahat" 
+                  className="w-20 h-20 rounded-full object-cover object-top border-2 border-primary/20 shadow-md"
+                />
                 <div>
                   <p className="font-serif font-semibold text-foreground text-lg">Dr. Kushendra Bahadur Mahat</p>
                   <p className="text-sm text-muted-foreground">Chairperson, Technology Applied Centre (TAC Nepal)</p>

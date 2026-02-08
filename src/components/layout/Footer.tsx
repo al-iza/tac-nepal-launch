@@ -39,24 +39,20 @@ export function Footer() {
               <img 
                 src={tacNepalLogo} 
                 alt="TAC Nepal - Technology Applied Centre" 
-                className="h-20 w-auto bg-white rounded-lg p-2"
+                className="h-20 w-auto bg-white/90 rounded-lg p-2 opacity-90"
               />
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-6 max-w-sm">
               Transformation Through Technology — transforming global technological innovations into practical, locally applicable solutions.
             </p>
             <div className="space-y-3 text-sm text-primary-foreground/80">
-              <div className="flex items-center gap-3">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span>Kathmandu, Nepal</span>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-primary-foreground/60 mt-0.5 flex-shrink-0" />
+                <span>Technology Applied Center (TAC Nepal), Lalitpur, Nepal</span>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="h-4 w-4 text-primary" />
-                <span>info@tacnepal.org</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="h-4 w-4 text-primary" />
-                <span>+977-1-XXXXXXX</span>
+                <Phone className="h-4 w-4 text-primary-foreground/60" />
+                <span>+977 9851075645</span>
               </div>
             </div>
           </div>
