@@ -159,7 +159,7 @@ const News = () => {
               Subscribe to our newsletter for the latest updates on technology transfer, 
               investment opportunities, and development insights from TAC Nepal.
             </p>
-            <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+            <Button asChild size="lg" variant="light">
               <Link to="/contact">
                 Contact Us to Subscribe
                 <ArrowRight className="ml-2 h-4 w-4" />
