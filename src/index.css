@@ -66,6 +66,14 @@
     --engineering-blue: 215 80% 50%;
     --steel: 215 20% 50%;
 
+    /* Button Colors */
+    --btn-blue: 215 75% 48%;
+    --btn-blue-hover: 215 75% 40%;
+    --btn-green: 152 55% 42%;
+    --btn-green-hover: 152 55% 34%;
+    --btn-teal: 168 50% 42%;
+    --btn-teal-hover: 168 50% 34%;
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(220 60% 20% / 0.95), hsl(215 80% 35% / 0.9));
     --gradient-subtle: linear-gradient(180deg, hsl(220 25% 97%), hsl(210 40% 99%));

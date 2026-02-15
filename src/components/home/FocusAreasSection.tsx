@@ -49,7 +49,7 @@ export function FocusAreasSection() {
               Driving technology transfer and innovation across key sectors of Nepal's economy
             </p>
           </div>
-          <Button asChild className="self-start lg:self-auto">
+          <Button asChild size="lg" className="self-start lg:self-auto">
             <Link to="/focus-areas">
               View All Areas
               <ArrowRight className="ml-2 h-4 w-4" />

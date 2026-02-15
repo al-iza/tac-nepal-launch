@@ -193,8 +193,8 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
+                    variant="secondary"
                     className="w-full"
-                    disabled={isSubmitting}
                   >
                     {isSubmitting ? (
                       "Sending..."

@@ -32,13 +32,13 @@ export function HeroSection() {
               </p>
 
               <div className="flex flex-wrap gap-4 animate-fade-up stagger-3">
-                <Button asChild size="lg" className="rounded-lg px-8 group">
+                <Button asChild size="lg" className="rounded-lg px-10 group">
                   <Link to="/what-we-do">
                     Explore Our Work
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
                 </Button>
-                <Button asChild size="lg" variant="secondary" className="rounded-lg px-8">
+                <Button asChild size="lg" variant="secondary" className="rounded-lg px-10">
                   <Link to="/contact">Partner With Us</Link>
                 </Button>
               </div>
