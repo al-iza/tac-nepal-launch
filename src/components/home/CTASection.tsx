@@ -24,13 +24,13 @@ export function CTASection() {
               support entrepreneurship, and drive sustainable industrial growth.
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 rounded-lg px-8 group">
+              <Button asChild size="lg" className="bg-[hsl(152,60%,40%)] hover:bg-[hsl(152,60%,32%)] text-white rounded-lg px-8 group shadow-lg hover:shadow-xl transition-all">
                 <Link to="/contact">
                   Get Started
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary rounded-lg px-8">
+              <Button asChild size="lg" className="bg-[hsl(215,80%,50%)] hover:bg-[hsl(215,80%,40%)] text-white rounded-lg px-8 shadow-lg hover:shadow-xl transition-all">
                 <Link to="/partners">View Partners</Link>
               </Button>
             </div>
