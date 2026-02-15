@@ -193,7 +193,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-primary hover:bg-primary-dark text-primary-foreground"
+                    className="w-full"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
