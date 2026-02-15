@@ -1,6 +1,7 @@
 import { Layout } from "@/components/layout/Layout";
 import { Globe, Settings, Link as LinkIcon, Rocket, MapPin, Factory, Cog, Quote, User } from "lucide-react";
 import drKushendraImage from "@/assets/dr-kushendra-mahat.jpg";
+import tejKattelImage from "@/assets/tej-prasad-kattel.jpg";
 
 const approaches = [
   {
@@ -57,8 +58,8 @@ const leadershipTeam = [
     description: "Responsible for identifying and evaluating globally proven technologies, machinery, and production systems relevant to Nepal's local resource-based industries.",
   },
   { 
-    name: "Head – Legal, Administration & Government Affairs", 
-    role: "Legal & Admin", 
+    name: "Tej Prasad Kattel", 
+    role: "Head – Legal, Administration & Government Affairs", 
     description: "Manages legal compliance, regulatory processes, and institutional administration. Supports company establishment, factory licensing, and government coordination.",
   },
 ];
@@ -259,6 +260,12 @@ const WhoWeAre = () => {
                   {index === 0 ? (
                     <img 
                       src={drKushendraImage} 
+                      alt={member.name}
+                      className="w-20 h-20 rounded-full object-cover object-top border-2 border-primary/20 shadow-md mb-4"
+                    />
+                  ) : index === 3 ? (
+                    <img 
+                      src={tejKattelImage} 
                       alt={member.name}
                       className="w-20 h-20 rounded-full object-cover object-top border-2 border-primary/20 shadow-md mb-4"
                     />
