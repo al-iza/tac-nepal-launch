@@ -123,7 +123,7 @@ const Projects = () => {
               <p className="text-lg text-muted-foreground mb-8">
                 TAC Nepal is actively developing and launching our portfolio of technology transfer projects. We are scouting global technologies, building partnerships, and planning implementation strategies to deliver commercial returns, operational sustainability, and measurable economic impact.
               </p>
-              <Button asChild size="lg" className="bg-primary hover:bg-primary-dark text-primary-foreground">
+              <Button asChild size="lg">
                 <Link to="/contact">
                   Partner With Us
                   <ArrowRight className="ml-2 h-4 w-4" />
