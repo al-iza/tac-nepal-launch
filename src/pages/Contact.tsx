@@ -193,7 +193,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full"
+                    className="w-full bg-[hsl(var(--btn-green))] hover:bg-[hsl(var(--btn-green-hover))] text-white"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (

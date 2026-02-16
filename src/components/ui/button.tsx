@@ -9,12 +9,13 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/85 shadow-sm hover:shadow-md transition-all",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        default: "bg-[hsl(var(--btn-blue))] text-white hover:bg-[hsl(var(--btn-blue-hover))] shadow-sm hover:shadow-md transition-all",
+        destructive: "bg-[hsl(var(--btn-red))] text-white hover:bg-[hsl(var(--btn-red-hover))] shadow-sm hover:shadow-md transition-all",
+        outline: "border-2 border-[hsl(var(--btn-blue))] text-[hsl(var(--btn-blue))] bg-transparent hover:bg-[hsl(var(--btn-blue))] hover:text-white transition-all",
+        secondary: "bg-[hsl(var(--btn-green))] text-white hover:bg-[hsl(var(--btn-green-hover))] shadow-sm hover:shadow-md transition-all",
         ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+        link: "text-[hsl(var(--btn-blue))] underline-offset-4 hover:underline",
+        purple: "bg-[hsl(var(--btn-purple))] text-white hover:bg-[hsl(var(--btn-purple-hover))] shadow-sm hover:shadow-md transition-all",
       },
       size: {
         default: "h-10 px-4 py-2",

@@ -183,7 +183,7 @@ const WhatWeDo = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg">
+            <Button asChild size="lg" variant="purple">
               <Link to="/contact">
                 Inquire About Equipment
                 <ArrowRight className="ml-2 h-4 w-4" />
