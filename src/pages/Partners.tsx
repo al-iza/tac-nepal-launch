@@ -193,7 +193,7 @@ const Partners = () => {
               Whether you're an investor looking for opportunities, a technology provider seeking market entry, 
               or an organization interested in collaboration, we'd love to hear from you.
             </p>
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg">
               <Link to="/contact">
                 Start a Conversation
                 <ArrowRight className="ml-2 h-4 w-4" />
