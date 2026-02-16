@@ -123,7 +123,7 @@ const Projects = () => {
               <p className="text-lg text-muted-foreground mb-8">
                 TAC Nepal is actively developing and launching our portfolio of technology transfer projects. We are scouting global technologies, building partnerships, and planning implementation strategies to deliver commercial returns, operational sustainability, and measurable economic impact.
               </p>
-              <Button asChild size="lg">
+              <Button asChild size="lg" variant="secondary">
                 <Link to="/contact">
                   Partner With Us
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -145,13 +145,13 @@ const Projects = () => {
               We're always looking for innovative technology transfer opportunities. If you have a project proposal or want to collaborate, get in touch with our team.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90">
+              <Button asChild size="lg" className="bg-white text-[hsl(var(--btn-blue))] hover:bg-white/90 font-semibold">
                 <Link to="/contact">
                   Submit Project Proposal
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
+              <Button asChild variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary">
                 <Link to="/partners">View Partners</Link>
               </Button>
             </div>
